@@ -32,7 +32,7 @@ public class Brand {
     for (int i = 0; i < models.length; i++) {
       CarYear[] years = models[i].getYears();
       for (int j = 0; j < years.length; j++) {
-        if (years[i].isValid())
+        if (years[j].isValid())
           contYears++;
       }
     }
