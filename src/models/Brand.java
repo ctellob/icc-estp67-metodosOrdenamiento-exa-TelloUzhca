@@ -39,25 +39,6 @@ public class Brand {
     return contYears;
   }
 
-  public Brand binarySearchByValidYears(Brand[] brands, int validYears, boolean isAscending) {
-    int bajo = 0;
-    int alto = brands.length - 1;
-
-    while (bajo <= alto) {
-      int central = (bajo + alto) / 2;
-      int valid = brands[central].getTotalValidYears();
-
-      if (valid == validYears)
-        return brands[central];
-      if (valid > validYears) {
-        bajo = central + 1;
-      } else {
-        alto = central - 1;
-      }
-    }
-    return null;
-  }
-
   @Override
   public String toString() {
     return "BrandController [brandName=" + brandName + ", models=" + Arrays.toString(models) + "]";
